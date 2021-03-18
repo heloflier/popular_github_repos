@@ -14,13 +14,7 @@ const styles = {
 
 export default class Loading extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            content: props.text
-        };
-    }
+    state = { content: this.props.text };
 
     componentDidMount() {
         const { speed, text } = this.props;
@@ -42,9 +36,7 @@ export default class Loading extends Component {
                 {this.state.content}
             </p>
         )
-    }
-
-    
+    }    
 }
 
 Loading.propTypes = {
