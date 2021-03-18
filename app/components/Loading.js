@@ -24,8 +24,6 @@ export default class Loading extends Component {
 
     componentDidMount() {
         const { speed, text } = this.props;
-        console.log('this.props: ', this.props);
-        console.log('text: ', text);
 
         window.interval = window.setInterval(() => {
             this.state.content === text + '...'
